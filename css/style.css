@@ -339,6 +339,71 @@ SEÇÃO SERVIÇOS
     display: none;
 }
 
+.services {
+    background-color: #6bb7cb;
+    border: none;
+    margin: 0;
+    padding: 2.5rem 1.5rem 0 1.5rem;
+    position: relative;
+    overflow: hidden;
+    
+    
+}
+
+.services-intro-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-bottom: 130px;
+    
+}
+
+.services-intro-title {
+    font-family: var(--font-main);
+    font-size: var(--size-title);
+    color: #063643;
+    margin: 0 0 1rem 0;
+    line-height: 1.30;
+}
+
+
+.services-intro-card p {
+    font-family: var(--font-secondary);
+    font-size: var(--size-mobile-l);
+    line-height: 1.6;
+    margin: 0
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: var(--size-detail);
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border: 1px solid #ffffff;
+    margin-top: 2rem;
+    
+}
+
+.btn-secondary:hover {
+    background-color: #c9c7c7;
+}
+
+
+.services-intro-img {
+    position: absolute;
+    bottom: -160px;
+    right: 15%;
+    height: auto;
+    width: 170px;
+}
 
 
 /* 
