@@ -2,6 +2,8 @@
     TIPOGRAFIA (Variáveis)
 */
 
+
+
 :root {
     --font-main: 'Poppins', sans-serif;
     --font-secondary: 'Open Sans', sans-serif;
@@ -22,12 +24,12 @@
 
 /*
  CONFIGURAÇÕES GERAIS E FONTES 
- */
+*/
 
 body {
     margin: 0;
     font-family: var(--font-secondary);
-    background-color: #f7f7f9;
+    background-color: #e2f5fa;
 }
 
 a {
@@ -41,13 +43,17 @@ ul {
     padding: 0;
 }
 
-/* ESTILOS DO HEADER (MOBILE) */
+
+/* 
+ESTILOS DO HEADER (MOBILE)
+ */
 
 .header {
+    margin-top: 33px;
     font-family: var(--font-main);
     font-weight: 700;
     background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: none;
 }
 
 .navbar {
@@ -60,7 +66,9 @@ ul {
 
 }
 
-/* LOGO MOBILE */
+/* 
+LOGO MOBILE 
+*/
 
 .brand-container {
     position: absolute;
@@ -73,12 +81,13 @@ ul {
 }
 
 .logo {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.text-logo {
+.logo-text-curvo {
     display: none;
 }
 
@@ -92,7 +101,9 @@ ul {
 }
 
 
-/* BOTÃO DO MENU MOBILE */
+/* 
+BOTÃO DO MENU MOBILE 
+*/
 .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -115,13 +126,15 @@ ul {
     transition: all 0.3s ease-in-out;
 }
 
-/* MENU DE NAVEGAÇÃO (MOBILE)*/
+/* 
+MENU DE NAVEGAÇÃO (MOBILE)
+*/
 .nav-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;   
+    width: 100%;
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 100;
@@ -147,9 +160,87 @@ ul {
     background-color: #f7f7f9;
 }
 
-/* ESTILOS DO HEADER (DESKTOP) */
+/*
+ESTILOS DA SEÇÃO HERO (MOBILE)
+*/
 
-@media (min-width: 768px){
+ .hero-section {
+    padding: 2rem 1rem;
+ }
+
+ .hero-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+ }
+
+
+ .hero-image-container {
+    width: 100%;
+ }
+
+
+ .hero-image-container img {
+    width: 100%;
+    height: auto;
+ }
+
+.hero-title {
+    font-family: var(--font-main);
+    font-weight: 700;
+    color: #000000;
+    font-size: var(--size-banner);
+    line-height: 1.2;
+    margin: 0;
+}
+
+.hero-title-desktop {
+    display: none;
+}
+
+.hero-title-mobile {
+    display: block;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: var(--size-mobile-l);
+    color: #ffffff;
+    background-color: #0F637A;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0c4d60;
+}
+
+
+
+
+/* 
+===============================
+ESTILOS DESKTOP 
+===============================
+*/
+
+@media (min-width: 768px) {
+
+/*ESTILOS HEADER */ 
+
+    .header {
+        margin-top: 0;
+        border-bottom: 1px solid #e0e0e0
+    }
+
     .navbar {
         justify-content: space-between;
         padding: 1rem 2rem;
@@ -169,16 +260,28 @@ ul {
     }
 
     .logo {
-
+        padding-top: 25px;
     }
 
-    .text-logo {
+    .logo-text-curvo {
+
         display: block;
-        position: relative;
-        margin-bottom: -8px;
-        font-size: var(--size-mobile-s)
-    
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 110px;
+        height: 40px;
+        overflow: visible;
+        pointer-events: none;
+
     }
+
+    .logo-text-curvo text {
+        fill: #222222;
+        letter-spacing: .5px;
+    }
+
 
     .logo img {
         height: 55px;
@@ -186,6 +289,7 @@ ul {
 
     .brand-container .brand-title {
         font-size: var(--size-title);
+        color: #063643;
     }
 
     .nav-menu {
@@ -207,9 +311,69 @@ ul {
         font-size: var(--size-detail);
     }
 
-    .nav-menu li a:hover{
+    .nav-menu li a:hover {
         background-color: transparent;
         color: #0c4d60;
     }
 
+
+/*
+ESTILOS DA SEÇÃO HERO
+*/
+
+.hero-section {
+    padding: 4rem 2rem;
+}
+
+.hero-card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex-basis: 45%;
+    order: 1;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.hero-image-container {
+    flex-basis: 50%;
+    order: 3;
+}
+
+.btn-primary {
+    flex-basis: 40%;
+    order: 2;
+}
+
+.hero-card {
+    align-items: flex-start;
+
+}
+.hero-title {
+    font-size: 2.5rem;
+}
+
+.hero-title-mobile {
+    display: none;
+}
+
+.hero-title-desktop {
+    display: block;
+}
+
+.btn {
+    font-size: var(--size-title);
+    font-weight: bold;
 }

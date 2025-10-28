@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -19,19 +21,31 @@
 
             <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menu">
                 <span class="bar"></span>
-                <span class="bar"></span> 
+                <span class="bar"></span>
                 <span class="bar"></span>
             </button>
 
 
             <div class="brand-container">
-                
+
                 <div class="logo">
-                    <span class="text-logo">ESTD 2021</span>
+                    <svg class="logo-text-curvo" viewBox="0 0 100 40" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path id="caminho-do-texto" d="M 0 36 Q 50 4 100 36" fill="none" />
+                        <text font-family="Poppins" font-size="10" font-weight="600">
+                            <textPath href="#caminho-do-texto" startOffset="50%" text-anchor="middle">
+                                ESTD 2021
+                            </textPath>
+                        </text>
+                    </svg>
+
+                    </svg>
+
+
                     <a href="/">
                         <img src="images/logo.svg" alt="Logo Pindorama Pets" class="logo-img">
                     </a>
-                    
+
                 </div>
 
                 <span class="brand-title">PINDORAMA PETS</span>
@@ -52,8 +66,32 @@
 
     </header>
 
+    <main>
+        <section class="hero-section">
+            <div class="hero-card">
 
 
-    <script src="/Pindorama-Pets/js/script.js"></script>
+
+
+                <div class="hero-content">
+                    <h1 class="hero-title hero-title-mobile">Cuidamos do seu animal com muito amor</h1>
+                    <h1 class="hero-title hero-title-desktop">Cuidando do Seu Pet com Profissionalismo e Carinho</h1>
+                </div>
+
+
+                <div class="hero-image-container">
+                    <img src="images/grupo-de-animais.png" alt="Grupo de cães e gatos">
+                </div>
+
+                <a href="#contato" class="btn btn-primary">Entre em contato</a>
+                
+            </div>
+        </section>
+    </main>
+
+
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>
