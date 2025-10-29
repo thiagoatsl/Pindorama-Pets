@@ -55,7 +55,7 @@ Por ser um projeto web estático, não há necessidade de instalação.
 
 1.  Clone este repositório:
     ```bash
-    git clone [https://github.com/USUARIO-DA-DUPLA/NOME-DO-REPOSITORIO.git](https://github.com/USUARIO-DA-DUPLA/NOME-DO-REPOSITORIO.git)
+    git clone [https://github.com/thiagoatsl/Pindorama-Pets.git](https://github.com/USUARIO-DA-DUPLA/NOME-DO-REPOSITORIO.git)
     ```
 2.  Navegue até a pasta do projeto.
 3.  Abra o arquivo `index.html` no seu navegador de preferência.
