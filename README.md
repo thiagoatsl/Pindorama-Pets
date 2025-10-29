@@ -23,7 +23,7 @@ O desenvolvimento da landing page foi dividido entre os membros da dupla para co
 
 * **Augusto Thiago (Trainee de Comercial):** Responsável pela parte superior da página (Seções: *Header, Hero, Carrossel, Sobre Nós, Nossos Serviços*).
 
-* **Ikaro (Trainee de Desenvolvimento):** Responsável pela parte inferior da página (Seções: *Nossos Profissionais, Contato, Footer*).
+* **Ikaro (Trainee de Desenvolvimento):** Responsável pela parte inferior da página.
 
 > [!NOTE]
 > Este repositório contém o **código-fonte completo** da landing page, integrando as contribuições de ambos os desenvolvedores.
@@ -37,7 +37,7 @@ O desenvolvimento da landing page foi dividido entre os membros da dupla para co
 * **Carrossel Interativo:** Carrossel de banners com controles de navegação e indicadores.
 * **Seções Completas:** Inclui todas as seções do protótipo, desde a apresentação até o formulário de contato e rodapé.
 * **Estrutura Semântica:** Uso correto de tags HTML5 para melhor acessibilidade e SEO.
-* **CSS Organizado:** Os estilos foram separados em `style.css` (base/mobile) e `responsive.css` (desktop) para facilitar a manutenção.
+
 
 ---
 
@@ -67,14 +67,14 @@ Por ser um projeto web estático, não há necessidade de instalação.
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/SEU-USUARIO-GITHUB-AQUI">
-        <img src="https://avatars.githubusercontent.com/SEU-USUARIO-GITHUB-AQUI" width="100px;" alt="Foto de Augusto Thiago no GitHub"/><br>
+      <a href="https://github.com/thiagoatsl">
+        <img src="https://avatars.githubusercontent.com/thiagoatsl" width="100px;" alt="Foto de Augusto Thiago no GitHub"/><br>
         <sub>
           <b>Augusto Thiago</b>
         </sub>
       </a><br>
-      <a href="https://www.linkedin.com/in/SEU-USUARIO-LINKEDIN-AQUI/" title="LinkedIn">LinkedIn</a> |
-      <a href="https://github.com/SEU-USUARIO-GITHUB-AQUI" title="GitHub">GitHub</a>
+      <a href="https://www.linkedin.com/in/augustothiago/" title="LinkedIn">LinkedIn</a> |
+      <a href="https://github.com/thiagoatsl" title="GitHub">GitHub</a>
     </td>
     <td align="center">
       <a href="https://github.com/USUARIO-IKARO-GITHUB-AQUI">
