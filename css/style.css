@@ -406,6 +406,253 @@ SEÇÃO SERVIÇOS
     display: none;
 }
 
+
+/* --- Estilos do Carrossel (do index.css) --- */
+
+#carousel {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding-block: 0.125rem;
+    /* Adicione um margin-bottom se precisar de espaço abaixo */
+    margin-bottom: 32px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 60%;
+    max-width: 62.5rem;
+    overflow: visible;
+    border-radius: 0.75rem;
+    box-shadow: none;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    height: clamp(16rem, 36vh, 26rem);
+}
+
+.carousel-overlay {
+    position: absolute;
+    left: 60%;
+    top: 28%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    text-align: center;
+    pointer-events: none;
+    --overlay-title-color: #063643;
+    --overlay-subtitle-color: #0b6b6b;
+}
+
+.carousel-overlay-title {
+    margin: 0;
+    color: var(--overlay-title-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: transparent;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    transform: translateX(-3%);
+    font-family: "Poppins", sans-serif;
+}
+
+.carousel-overlay-subtitle {
+    margin: 0;
+    color: var(--overlay-subtitle-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: transparent;
+    padding: 0;
+    margin-top: 0.20rem;
+    transform: translateX(-15%);
+    white-space: pre-line;
+    line-height: 1.25;
+    text-align: left;
+    max-width: 18rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Estilos Específicos do Slide 1 (Adoção) */
+.carousel-overlay[data-slide="1"] {
+    --overlay-title-color: #ffffff;
+    --overlay-subtitle-color: #ffffff;
+}
+
+.carousel-overlay[data-slide="1"] .carousel-overlay-title {
+    transform: translate(-115%, 1rem);
+    text-align: left;
+}
+
+.carousel-overlay[data-slide="1"] .carousel-overlay-subtitle {
+    transform: translate(-95%, 0.9rem);
+    text-align: left;
+    font-size: 0.6rem;
+    line-height: 1.5;
+}
+
+/* Estilos Específicos do Slide 2 (Banho e Tosa) */
+.carousel-overlay[data-slide="2"] {
+    --overlay-title-color: #063643;
+    --overlay-subtitle-color: #0b6b6b;
+}
+
+.carousel-overlay[data-slide="2"] .carousel-overlay-title {
+    transform: translate(-69%, -0.19rem);
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.carousel-overlay[data-slide="2"] .carousel-overlay-subtitle {
+    transform: translate(-67%, 0.1rem);
+    text-align: left;
+    font-size: 1rem !important;
+    line-height: 1.2;
+    max-width: 40rem;
+    margin-top: 0.25rem;
+    white-space: normal;
+}
+
+/* Estilo do Botão Flutuante (CTA) */
+.carousel-cta-floating {
+    position: absolute;
+    left: 55.5%;
+    top: 59%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    color: #063643;
+    text-decoration: none;
+    padding: 0.6rem 2.2rem;
+    min-width: 4rem;
+    font-size: 1.4rem;
+    border-radius: 0.2rem;
+    font-weight: 700;
+    pointer-events: auto;
+    z-index: 5;
+    font-family: "Poppins", sans-serif;
+}
+
+.carousel-cta-floating:hover {
+    background: #7CCBE0;
+    color: #063643;
+}
+
+/* Estilos do CTA para o Slide 2 */
+.carousel-overlay[data-slide="2"]~.carousel-cta-floating,
+.carousel-overlay[data-slide="2"] .carousel-cta-floating {
+    left: 20%;
+    top: 55%;
+    transform: translate(-50%, -10%);
+    position: absolute;
+    z-index: 4;
+    background: #063643;
+    color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.carousel-overlay[data-slide="2"] .carousel-cta-floating:hover,
+.carousel-overlay[data-slide="2"]~.carousel-cta-floating:hover {
+    background: #7CCBE0;
+    color: #063643;
+}
+
+/* Slides */
+.carousel-slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+    /* Adicionei uma transição suave */
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.carousel-slide img {
+    width: auto;
+    max-width: 98%;
+    max-height: 94%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Controles (Setas) */
+.carousel-control {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-45%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent !important;
+    color: #fff;
+    border: none;
+    width: 4.25rem;
+    height: 4.25rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.carousel-control img {
+    width: 1.6rem;
+    height: 1.6rem;
+    display: block;
+    background: none !important;
+}
+
+.carousel-control.prev {
+    left: clamp(-4rem, -10vw, -2.5rem);
+}
+
+.carousel-control.next {
+    right: clamp(-4rem, -10vw, -2.5rem);
+}
+
+.carousel-control:hover {
+    background: transparent !important;
+}
+
+/* Indicadores (Bolinhas) */
+.carousel-indicators {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    padding-block: 0.75rem;
+}
+
+.indicator {
+    width: 0.85rem;
+    height: 0.85rem;
+    border-radius: 50%;
+    background: rgba(6, 54, 67, 0.15);
+    border: none;
+    cursor: pointer;
+}
+
+.indicator[aria-selected="true"],
+.indicator.active {
+    background: #0F637A;
+}
+
+
 /* 
 ===============================
 ESTILOS DESKTOP 
@@ -491,12 +738,14 @@ ESTILOS DESKTOP
         padding: 0.5rem;
         text-transform: none;
         font-size: var(--size-detail);
-        border-radius: 8px;      /* Adiciona bordas arredondadas */
+        border-radius: 8px;
+        /* Adiciona bordas arredondadas */
         transition: all 0.3s ease;
     }
 
     .nav-menu li a:hover {
-        background-color: #cce9f1;;
+        background-color: #cce9f1;
+        ;
         color: #0c4d60;
     }
 
@@ -789,7 +1038,7 @@ SEÇÃO QUEM SOMOS (DESKTOP)
 
     .services-desktop-content {
         display: block;
-        
+
     }
 
     .service-block {
@@ -816,5 +1065,68 @@ SEÇÃO QUEM SOMOS (DESKTOP)
         margin-bottom: 0;
         /* Remove o margin-bottom (era 2.5rem) */
     }
+
+
+
+/* --- Responsividade do Carrossel (do index.css) --- */
+    
+
+    #carousel {
+        display: flex; /* Mostra o carrossel no desktop */
+    }
+
+    /* 768px */
+    .carousel-container {
+        width: 92%;
+        height: clamp(12rem, 30vh, 18rem);
+        /* Ajuste de altura para mobile */
+    }
+
+    .carousel-control {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+
+    .carousel-control img {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .carousel-control.prev {
+        left: -1rem;
+    }
+
+    .carousel-control.next {
+        right: -1rem;
+    }
+
+    .carousel-control {
+        top: 42%;
+        transform: translateY(-42%);
+    }
+
+    /* Ajustes de texto para mobile */
+    .carousel-overlay-title {
+        font-size: 1.05rem;
+        padding: 0.4rem 0.7rem;
+    }
+
+    .carousel-overlay {
+        gap: 0.5rem;
+    }
+
+    .carousel-cta-floating {
+        padding-inline: 1.2rem;
+        min-width: 0;
+        font-size: 1rem;
+        /* Tamanho de fonte menor */
+    }
+
+    .carousel-container .carousel-overlay[data-slide="2"] .carousel-overlay-title {
+        font-size: 0.95rem !important;
+        max-width: calc(90vw - 4rem);
+    }
+
 
 }
